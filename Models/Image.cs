@@ -5,10 +5,11 @@ namespace prjFinanceTime.Models
 {
     public class Image
     {
-        public int Id { get; set; }
+        public int ImageID { get; set; }
 
         [Required]
         public string Name { get; set; }
+
         [Required]
         public string Path { get; set; }
 

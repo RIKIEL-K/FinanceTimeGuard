@@ -5,10 +5,10 @@ namespace prjFinanceTime.Models
 {
     public class User
     {
-        public int UserId {  get; set; }
+        public int UserID {  get; set; }
 
         [StringLength(50)]
-        [Required]
+
         [Display(Name = "Name")]
         public string UserName { get; set; }
 
@@ -20,14 +20,14 @@ namespace prjFinanceTime.Models
 
         [StringLength(50)]
         [Required]
-        [Display(Name = "password")]
         [PasswordPropertyText]
         public string Password { get; set; }
 
         [StringLength(50 , MinimumLength = 5)]
         [Required]
-        [Display(Name = "createdAt")]
-        public DateTime createdAt  { get; set; }
+        public DateTime CreatedAt  { get; set; }
         public virtual Image Image { get; set; }
+
+        public virtual ICollection<Transaction> Transactions { get; set; }
     }
 }
