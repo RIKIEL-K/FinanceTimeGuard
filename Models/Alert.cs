@@ -28,6 +28,7 @@ namespace prjFinanceTime.Models
     }
     public class Alert
     {
+        [Key]
         public int AlertID { get; set; }
 
         [ForeignKey(nameof(User))]

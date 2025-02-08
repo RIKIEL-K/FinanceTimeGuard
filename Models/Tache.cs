@@ -3,8 +3,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace prjFinanceTime.Models
 {
-    public class Task
+    public class Tache
     {
+        [Key]
         public int TaskID { get; set; }
 
         [ForeignKey(nameof(User))]

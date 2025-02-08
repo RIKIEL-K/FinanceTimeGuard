@@ -5,6 +5,7 @@ namespace prjFinanceTime.Models
 {
     public class Image
     {
+        [Key]
         public int ImageID { get; set; }
 
         [Required]
@@ -17,8 +18,9 @@ namespace prjFinanceTime.Models
         [Display(Name  = "Image")]
         //represente le fichier stocké sur la DBA
         public IFormFile file { get; set; }
-        public virtual User user { get; set; }
+        public virtual User User { get; set; }
 
-        public int FruitId { get; set; }
+        [ForeignKey(nameof(User))]
+        public int UserID { get; set; }
     }
 }

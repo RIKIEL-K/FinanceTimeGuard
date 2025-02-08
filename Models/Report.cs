@@ -5,6 +5,7 @@ namespace prjFinanceTime.Models
 {
     public class Report
     {
+        [Key]
         public int ReportID { get; set; }
 
         [ForeignKey(nameof(User))]

@@ -6,6 +6,7 @@ namespace prjFinanceTime.Models
 {
     public class Transaction
     {
+        [Key]
         public int TransactionID { get; set; }
 
         [Required]

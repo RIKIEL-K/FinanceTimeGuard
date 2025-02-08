@@ -21,9 +21,10 @@ namespace prjFinanceTime.Models
     }
     public class Categorie
     {
-        public int UserID { get; set; }
-
         [Required]
+        public int UserID { get; set; }
+        
+        [Key]
         public int CategorieID { get; set; }
 
         public Type ? Type { get; set; }
