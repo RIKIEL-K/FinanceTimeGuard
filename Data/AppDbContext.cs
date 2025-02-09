@@ -1,11 +1,15 @@
-﻿using System.Data.Entity;
-using prjFinanceTime.Models;
-using System.Data.Entity.ModelConfiguration.Conventions;
+﻿using prjFinanceTime.Models;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 namespace prjFinanceTime.Data
 
 {
-    public class AppDbContext : DbContext
+    public class AppDbContext : IdentityDbContext
     {
+        public AppDbContext(DbContextOptions<AppDbContext> options)
+            : base(options)
+        {
+        }
         public DbSet<Alert> Alerts { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Report> Reports { get; set; }
@@ -15,10 +19,6 @@ namespace prjFinanceTime.Data
         public DbSet<Image> Images { get; set; }
         public DbSet<Transaction> Transactions { get; set; }
 
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
-            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
-        }
 
     }
 }
