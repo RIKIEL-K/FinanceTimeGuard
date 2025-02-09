@@ -10,6 +10,17 @@ namespace prjFinanceTime.Data
             : base(options)
         {
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Image>()
+                .HasOne(i => i.User)  // Une Image a un User
+                .WithMany(u => u.Images)  // Un User a plusieurs Images
+                .HasForeignKey(i => i.UserID)  // Clé étrangère
+                .OnDelete(DeleteBehavior.Cascade); // Si l'utilisateur est supprimé, les images le sont aussi
+        }
         public DbSet<Alert> Alerts { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Report> Reports { get; set; }

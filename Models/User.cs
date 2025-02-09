@@ -27,7 +27,7 @@ namespace prjFinanceTime.Models
        
         [Required]
         public DateTime CreatedAt  { get; set; }
-        public virtual Image Image { get; set; }
+    
 
         public virtual ICollection<Transaction> Transactions { get; set; }
         public ICollection<Budget> Budgets { get; set; } = new List<Budget>();

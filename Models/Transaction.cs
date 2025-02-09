@@ -16,6 +16,7 @@ namespace prjFinanceTime.Models
 
 
         [DataType(DataType.Currency)]
+        [Column(TypeName = "decimal(18,4)")]
         [Required]
         public decimal Amount { get; set; }
 

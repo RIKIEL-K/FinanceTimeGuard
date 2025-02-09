@@ -12,6 +12,8 @@ namespace prjFinanceTime.Models
         public int UserID { get; set; }
         [Required]
         public int CategoryID { get; set; }
+
+        [Column(TypeName = "decimal(18,4)")]
         public decimal MonthlyLimit { get; set; }
 
         public virtual User User { get; set; }
