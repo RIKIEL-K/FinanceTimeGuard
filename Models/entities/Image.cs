@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace prjFinanceTime.Models
+namespace prjFinanceTime.Models.entities
 {
     public class Image
     {
@@ -15,7 +15,7 @@ namespace prjFinanceTime.Models
         public string Path { get; set; }
 
         [NotMapped] //pas stocker dans la DB
-        [Display(Name  = "Image")]
+        [Display(Name = "Image")]
         //represente le fichier stocké sur la DBA
         public IFormFile file { get; set; }
         public virtual User User { get; set; }

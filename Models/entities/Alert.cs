@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace prjFinanceTime.Models
+namespace prjFinanceTime.Models.entities
 {
     public enum ExpenseCategory
     {
@@ -39,10 +39,10 @@ namespace prjFinanceTime.Models
         public int CategoryID { get; set; }
         public string Message { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.Now;
-        public AlertStatus ? Status { get; set; } = AlertStatus.Active;
+        public AlertStatus? Status { get; set; } = AlertStatus.Active;
 
         public virtual User User { get; set; }
-        public ExpenseCategory ? Category { get; set; }
+        public ExpenseCategory? Category { get; set; }
 
     }
 }

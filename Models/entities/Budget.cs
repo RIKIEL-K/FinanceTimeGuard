@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace prjFinanceTime.Models
+namespace prjFinanceTime.Models.entities
 {
     public class Budget
     {

@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Reflection.Metadata;
 
-namespace prjFinanceTime.Models
+namespace prjFinanceTime.Models.entities
 {
     public class Transaction
     {
@@ -26,7 +26,7 @@ namespace prjFinanceTime.Models
 
         public DateTime date { get; set; }
 
-        public string ? Description  { get; set; }
+        public string? Description { get; set; }
 
 
     }

@@ -1,6 +1,6 @@
-﻿using prjFinanceTime.Models;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using prjFinanceTime.Models.entities;
 namespace prjFinanceTime.Data
 
 {

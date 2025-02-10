@@ -1,12 +1,12 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace prjFinanceTime.Models
+namespace prjFinanceTime.Models.entities
 {
     public class User
     {
         [Key]
-        public int UserID {  get; set; }
+        public int UserID { get; set; }
 
         [StringLength(50)]
 
@@ -24,10 +24,10 @@ namespace prjFinanceTime.Models
         [PasswordPropertyText]
         public string Password { get; set; }
 
-       
+
         [Required]
-        public DateTime CreatedAt  { get; set; }
-    
+        public DateTime CreatedAt { get; set; }
+
 
         public virtual ICollection<Transaction> Transactions { get; set; }
         public ICollection<Budget> Budgets { get; set; } = new List<Budget>();
