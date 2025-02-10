@@ -9,5 +9,11 @@ namespace prjFinanceTime.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public IActionResult Adda()
+        {
+            return View();
+        }
     }
 }
